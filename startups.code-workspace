@@ -1,0 +1,14 @@
+{
+	"folders": [
+		{
+			"path": "."
+		},
+		{
+			"path": "../destined"
+		},
+		{
+			"path": "../../React/task-app"
+		}
+	],
+	"settings": {}
+}
