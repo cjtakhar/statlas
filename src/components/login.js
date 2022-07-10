@@ -1,8 +1,15 @@
 import { useState } from 'react';
+import { db } from './userdb';
 
 export default function Login() {
     const [name, setName] = useState('');
     const [password, setPassword] = useState('');
+
+    const handleChange = () => {
+        if ({name} !== db.username) {
+            alert("hello!")
+        } else alert("You're in!")
+    }
 
     return(
         <form>
