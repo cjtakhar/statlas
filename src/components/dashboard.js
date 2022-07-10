@@ -13,9 +13,10 @@ export default function Dashboard() {
         .then((res) => res.json())
         .then((data) => data);
 
-        setStat({ data: data })
+        setStat({ data: data[0].bookmakers[0].markets[0].outcomes})
 
-        console.log(stat.data[0].bookmakers[0].markets[0].outcomes)
+        console.log(stat.data[0]);
+        console.log(stat.data[1])
     }
     
     return(
@@ -31,7 +32,7 @@ export default function Dashboard() {
                 </form>
             </div>
             <div>
-               
+               <h1></h1>
             </div>
         </div>
     )
