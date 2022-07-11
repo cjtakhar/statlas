@@ -6,7 +6,7 @@ export default function Quotes() {
     
    useEffect(() => {
     const fetchData = async () => {
-        const data = await fetch('https://zenquotes.io?api=random&key=${APIKEY}', {mode: 'no-cors'});
+        const data = await fetch(`https://zenquotes.io?api=random&key=${APIKEY}`, {mode: 'no-cors'});
         setQuote(data)
     };
     fetchData()

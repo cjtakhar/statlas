@@ -7,8 +7,8 @@ export default function Dashboard() {
     const [stat, setStat] = useState([]);
     const APIKEY = "38219d4ba54d7b3139ece100b48bd0cc";
 
-    const fetchStats = () => {
-        fetch('https://api.the-odds-api.com/v4/sports/americanfootball_nfl/odds/?regions=us&oddsFormat=american&apiKey=${APIKEY}', {mode: 'no-cors'})
+    const fetchStats = async () => {
+       await fetch('https://api.the-odds-api.com/v4/sports/americanfootball_nfl/odds/?regions=us&oddsFormat=american&apiKey=${APIKEY}', {mode: 'no-cors'})
         .then((res) => res.json())
         .then((data) => setStat({ data: data[0].bookmakers[0].markets[0].outcomes}))
     }
@@ -17,7 +17,7 @@ export default function Dashboard() {
         fetchStats()
     }, [])
     
-    console.log(stat)
+    console.log(stat.data)
     
     return(
         <div>
