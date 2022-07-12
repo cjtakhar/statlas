@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { db } from './userdb';
+import {db} from './userdb';
 
 export default function Login() {
     const [name, setName] = useState('');

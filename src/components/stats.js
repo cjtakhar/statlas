@@ -3,13 +3,12 @@ import { useState, useEffect } from 'react';
 export default function Stats() {
     const [users, setUsers] = useState([]);
 
-    const fetchData = () => {
-        fetch("https://jsonplaceholder.typicode.com/users")
-        .then((res) => res.json())
-        .then((data) => setUsers(data))
-    }
-
     useEffect(() => {
+        const fetchData = () => {
+            fetch("https://jsonplaceholder.typicode.com/users")
+            .then((res) => res.json())
+            .then((data) => setUsers(data))
+        }
         fetchData()
     }, [])
 
@@ -22,7 +21,7 @@ export default function Stats() {
            <ul>
             {users.map((user) => {
                 return(
-                    <li key={user.id}>{user.name} </li>
+                    <li key={user.id}>{user.username} </li>
                 )
             })}
            </ul>
