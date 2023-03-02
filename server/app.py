@@ -1,9 +1,11 @@
+import os
 import openai
-import config
 from flask import Flask, request, jsonify
 
 app = Flask(__name__)
-openai.api_key = config.API_KEY
+openai.api_key = os.environ.get('API_KEY')
+
+openai.api_version = "2022-12-01"
 
 @app.route("/chatlas", methods=["POST"])
 def answer_question():
