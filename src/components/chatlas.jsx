@@ -15,17 +15,23 @@ export default function Chatlas() {
   };
 
   return (
-    <div>
-      <form onSubmit={handleSubmit}>
-        <input
-          type="text"
-          value={question}
-          onChange={(e) => setQuestion(e.target.value)}
-        />
-        <button type="submit">Ask</button>
-      </form>
-      <p>{answer}</p>
+    <div className="container-fluid">
+    <div className="form-container">
+    <form className="chat-form" onSubmit={handleSubmit}>
+      <input
+        className="chat-input"
+        type="text"
+        value={question}
+        onChange={(e) => setQuestion(e.target.value)}
+      />
+      <button className="chat-btn" type="submit">Ask</button>
+    </form>
     </div>
+    <div className="answer-container">
+    <p className="answer">{answer}</p>
+    </div>
+   
+  </div>
   );
 }
 
