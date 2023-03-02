@@ -14,6 +14,13 @@ export default function Chatlas() {
     setAnswer(responseAnswer);
   };
 
+  const handleKeyDown = (e) => {
+    if (e.key === "Enter") {
+      e.preventDefault();
+      handleSubmit(e);
+    }
+  };
+
   return (
     <div className="container-fluid">
       <div>
@@ -26,6 +33,7 @@ export default function Chatlas() {
             type="text"
             value={question}
             onChange={(e) => setQuestion(e.target.value)}
+            onKeyDown={handleKeyDown}
           />
           <button className="chat-btn" type="submit">
             Ask
@@ -38,3 +46,5 @@ export default function Chatlas() {
     </div>
   );
 }
+
+
