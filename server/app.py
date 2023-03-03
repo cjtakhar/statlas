@@ -3,9 +3,8 @@ import openai
 from flask import Flask, request, jsonify
 
 app = Flask(__name__)
-openai.api_key = os.environ.get('API_KEY')
 
-openai.api_version = "2022-12-01"
+openai.api_key = os.environ.get('API_KEY')
 
 @app.route("/chatlas", methods=["POST"])
 def answer_question():
@@ -25,5 +24,5 @@ def answer_question():
     return jsonify({"answer": answer})
 
 if __name__ == "__main__":
-    app.run()
+    app.run(host="0.0.0.0", port=5000, debug=True)
 

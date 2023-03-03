@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import axios from "axios";
 
 export default function Chatlas() {
   const [question, setQuestion] = useState("");
@@ -6,12 +7,16 @@ export default function Chatlas() {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    const response = await fetch("/chatlas", {
-      method: "POST",
-      body: new URLSearchParams({ question }),
-    });
-    const { answer: responseAnswer } = await response.json();
-    setAnswer(responseAnswer);
+    try {
+      const response = await axios.post("/chatlas", { question });
+      const { answer: responseAnswer } = response.data;
+      setAnswer(responseAnswer);
+    } catch (error) {
+      console.error(error);
+      setAnswer(
+        "An error occurred while fetching the answer. Please try again later."
+      );
+    }
   };
 
   const handleKeyDown = (e) => {
@@ -46,5 +51,3 @@ export default function Chatlas() {
     </div>
   );
 }
-
-
