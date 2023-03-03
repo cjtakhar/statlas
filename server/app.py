@@ -3,12 +3,12 @@ import openai
 from flask import Flask, request, jsonify
 
 app = Flask(__name__)
-
 openai.api_key = os.environ.get('API_KEY')
 
-@app.route("/chatlas", methods=["POST"])
+@app.route('/chatlas', methods=['POST'])
 def answer_question():
-    question = request.form.get("question")
+    data = request.json
+    question = data['question']
     model = "text-davinci-002"
     temperature = 0.5
     max_tokens = 50
@@ -21,8 +21,8 @@ def answer_question():
     )
 
     answer = response.choices[0].text
-    return jsonify({"answer": answer})
+    return jsonify({'answer': answer})
 
-if __name__ == "__main__":
-    app.run(host="0.0.0.0", port=5000, debug=True)
+if __name__ == '__main__':
+    app.run(host='0.0.0.0', port=5000, debug=True)
 
