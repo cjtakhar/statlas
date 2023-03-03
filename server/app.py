@@ -13,7 +13,7 @@ openai.api_key = os.environ.get('API_KEY')
 def answer_question():
     data = request.json
     question = data['question']
-    model = "text-davinci-002"
+    model = "text-davinci-003"
     temperature = 0.5
     max_tokens = 50
 
