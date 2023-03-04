@@ -48,6 +48,9 @@ export default function Chatlas() {
       <div className="answer-container">
         <p className="answer">{answer}</p>
       </div>
+      <div className="footer">
+        <p className="footer-id"><a href="https://cjtakhar.com">cj takhar</a></p>
+      </div>
     </div>
   );
 }
