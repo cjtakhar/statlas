@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import axios from "axios";
 
-export default function Chatlas() {
+export default function Statlas() {
   const [question, setQuestion] = useState("");
   const [answer, setAnswer] = useState("");
 

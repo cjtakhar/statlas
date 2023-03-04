@@ -3,9 +3,7 @@ import {
   Routes,
   Route,
  } from 'react-router-dom';
-import Home from './components/home';
-import Dash from './components/dash';
-import Chatlas from './components/chatlas';
+import Statlas from './components/statlas';
 
 import './App.css';
 
@@ -14,9 +12,7 @@ function App() {
     <div className="App">
       <BrowserRouter>
         <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/dash" element={<Dash />} />
-          <Route path="/chatlas" element={<Chatlas />} />
+          <Route path="/chatlas" element={< Statlas />} />
         </Routes>
       </BrowserRouter>
     </div>
