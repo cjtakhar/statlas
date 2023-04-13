@@ -1,15 +1,15 @@
 {
   "files": {
     "main.css": "/statlas/static/css/main.1c6ad99e.css",
-    "main.js": "/statlas/static/js/main.43e92dc8.js",
+    "main.js": "/statlas/static/js/main.d1dfdeb8.js",
     "static/js/787.ce4d0756.chunk.js": "/statlas/static/js/787.ce4d0756.chunk.js",
     "index.html": "/statlas/index.html",
     "main.1c6ad99e.css.map": "/statlas/static/css/main.1c6ad99e.css.map",
-    "main.43e92dc8.js.map": "/statlas/static/js/main.43e92dc8.js.map",
+    "main.d1dfdeb8.js.map": "/statlas/static/js/main.d1dfdeb8.js.map",
     "787.ce4d0756.chunk.js.map": "/statlas/static/js/787.ce4d0756.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.1c6ad99e.css",
-    "static/js/main.43e92dc8.js"
+    "static/js/main.d1dfdeb8.js"
   ]
 }
