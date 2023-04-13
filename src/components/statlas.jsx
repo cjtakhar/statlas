@@ -11,6 +11,7 @@ export default function Statlas() {
       const response = await axios.post("/statlas", { question });
       const { answer: responseAnswer } = response.data;
       setAnswer(responseAnswer);
+      setQuestion("");
     } catch (error) {
       console.error(error);
       setAnswer(
