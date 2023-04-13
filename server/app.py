@@ -9,13 +9,13 @@ api_key = os.getenv('API_KEY')
 app = Flask(__name__)
 openai.api_key = os.environ.get('API_KEY')
 
-@app.route('/chatlas', methods=['POST'])
+@app.route('/statlas', methods=['POST'])
 def answer_question():
     data = request.json
     question = data['question']
     model = "text-davinci-003"
     temperature = 0.5
-    max_tokens = 50
+    max_tokens = 1000
 
     response = openai.Completion.create(
         engine=model,

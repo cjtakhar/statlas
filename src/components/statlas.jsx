@@ -8,7 +8,7 @@ export default function Statlas() {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const response = await axios.post("/chatlas", { question });
+      const response = await axios.post("/statlas", { question });
       const { answer: responseAnswer } = response.data;
       setAnswer(responseAnswer);
     } catch (error) {
